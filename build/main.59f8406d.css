@@ -1,0 +1,46 @@
+/*!*********************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/RoundProgressBar/style.css ***!
+  \*********************************************************************************************/
+* {
+  margin: 0;
+}
+
+.aza {
+  background-color: black;
+}
+/*!*******************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/globals.css ***!
+  \*******************************************************************/
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+:root {
+  --main-white: #fff;
+  --main-blue: #005cff;
+  --main-grey: #eaf0f6;
+  --main-black: #070707;
+
+  --main-btn_grey: #dae6ec;
+
+  --stroke-blue: #99c1ff;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

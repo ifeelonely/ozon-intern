@@ -1,0 +1,35 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  font-size: 1rem;
+}
+
+:root {
+  --main-white: #fff;
+  --main-blue: #005cff;
+  --main-grey: #eaf0f6;
+  --main-black: #070707;
+
+  --main-btn_grey: #dae6ec;
+
+  --stroke-blue: #99c1ff;
+}
+
+.App {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

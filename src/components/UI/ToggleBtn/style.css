@@ -1,0 +1,34 @@
+.toggle-btn {
+  position: relative;
+  width: 3rem;
+  height: 28px;
+  border-radius: 5rem;
+  cursor: pointer;
+
+  background-color: var(--main-grey);
+  transition: 0.2s linear;
+}
+
+.toggle-btn-input {
+  display: none;
+}
+
+.toggle-btn::before {
+  position: absolute;
+  content: '';
+  background-color: var(--main-white);
+  width: 100%;
+  max-width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 5rem;
+  margin: 3px;
+  transition: 0.2s linear;
+}
+
+.toggle-btn-input:checked + .toggle-btn {
+  background-color: var(--main-blue);
+}
+
+.toggle-btn-input:checked + .toggle-btn::before {
+  transform: translateX(90%);
+}
