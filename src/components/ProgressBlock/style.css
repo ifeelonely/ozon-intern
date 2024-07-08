@@ -1,48 +1,15 @@
 .progress-block {
   position: relative;
-  width: 100%;
-  max-width: 20rem;
-  height: 100%;
-  max-height: 35.5rem;
-  border: 2px dashed var(--stroke-blue);
 
-  display: grid;
-  grid-template-rows: 45% auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
   align-items: center;
   justify-content: center;
 }
 
-.progress-block::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: -5%;
-  bottom: -5%;
-  border-left: 2px dashed var(--stroke-blue);
-  z-index: -1000;
-}
-
-.progress-block::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -10%;
-  right: -10%;
-  height: 1px;
-  border-top: 2px dashed var(--stroke-blue);
-  transform: translateY(-50%);
-  z-index: -1000;
-}
-
 @media (orientation: landscape) {
   .progress-block {
-    width: 100%;
-    max-width: 35.5rem;
-    height: 100%;
-    max-height: 20rem;
-    grid-template-columns: 45% auto;
-    grid-template-rows: 1fr;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
   }
 }

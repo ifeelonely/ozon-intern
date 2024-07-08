@@ -2,8 +2,9 @@
   position: relative;
   width: 9rem;
   height: 9rem;
-  background: conic-gradient(var(--main-blue) 3.6deg, var(--main-grey) 0deg);
+  background: conic-gradient(var(--main-blue) 0deg, var(--main-grey) 0deg);
   border-radius: 50%;
+  transition: 0.3s linear;
 }
 
 .circular-progress-bar_animated {
@@ -21,6 +22,7 @@
   width: 7.5rem;
   border-radius: 50%;
   background-color: var(--main-white);
+  transition: 0.8s linear;
 }
 
 @keyframes spin {

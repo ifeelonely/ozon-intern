@@ -24,7 +24,7 @@ export class ProgressBlock {
       'number',
       'Value',
       ['number-input'],
-      debounce(barContext.changeValue, 300),
+      debounce(barContext.changeValue, 500),
       this.initialValue
     );
 

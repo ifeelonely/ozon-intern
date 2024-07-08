@@ -11,7 +11,7 @@ const options = {
     output: path.join(__dirname, 'build'),
     templatePath: path.join(__dirname, 'public', 'index.html'),
   },
-  port: 8080,
+  port: 8081,
   mode: 'production',
 };
 

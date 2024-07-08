@@ -1,4 +1,5 @@
 import { CustomFramework } from '../../framework/CustomFramework.js';
+import { animateGradient } from '../../utils/animateGradient.js';
 import './style.css';
 
 export class CircularProgressBar {
@@ -8,19 +9,23 @@ export class CircularProgressBar {
   constructor({ initialValue }) {
     this.#isHidden = false;
     this.element = this.#render();
-    this.#value = this.#calcGradientDeg(initialValue);
+    this.calcGradientDeg = this.calcGradientDeg.bind(this);
     this.changeValue = this.changeValue.bind(this);
+    this.#value = initialValue;
     this.setHide = this.setHide.bind(this);
     this.setAnimate = this.setAnimate.bind(this);
     this.context = this;
+
+    this.calcGradientDeg(this.#value);
   }
 
   // ===Api===
 
   changeValue() {
     const newValue = document.querySelector('.number-input').value;
+    if (!this.#isValidValue(+newValue)) return;
+    animateGradient(+newValue, this.#value, this.calcGradientDeg);
     this.#value = this.#isValidValue(newValue) ? newValue : this.#value;
-    this.#calcGradientDeg(this.#value);
   }
 
   setHide(isHidden) {
@@ -40,7 +45,7 @@ export class CircularProgressBar {
     return +value >= 0 && +value <= 100;
   }
 
-  #calcGradientDeg(value) {
+  calcGradientDeg(value) {
     if (!this.#isValidValue) return;
     this.element.style.background = `conic-gradient(var(--main-blue) ${
       value * 3.6

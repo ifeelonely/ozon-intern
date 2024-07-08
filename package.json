@@ -1,11 +1,14 @@
 {
+  "homepage": "https://ifeelonely.github.io/ozon-intern",
   "name": "progressbar",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "webpack server"
+    "start": "webpack server",
+    "predeploy": "webpack",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
