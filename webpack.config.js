@@ -12,7 +12,7 @@ const options = {
     templatePath: path.join(__dirname, 'public', 'index.html'),
   },
   port: 8080,
-  mode: 'development',
+  mode: 'production',
 };
 
 const config = buildWebpackConfig(options);
