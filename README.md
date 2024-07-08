@@ -1,7 +1,5 @@
 # Тестовое задание Ozon
 
----
-
 [Деплой проекта](https://ifeelonely.github.io/ozon-intern/)
 
 ## Стек
