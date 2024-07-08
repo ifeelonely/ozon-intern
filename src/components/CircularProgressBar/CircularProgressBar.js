@@ -8,15 +8,32 @@ export class CircularProgressBar {
 
   constructor({ initialValue }) {
     this.#isHidden = false;
+    this.#value = initialValue;
     this.element = this.#render();
     this.calcGradientDeg = this.calcGradientDeg.bind(this);
     this.changeValue = this.changeValue.bind(this);
-    this.#value = initialValue;
     this.setHide = this.setHide.bind(this);
     this.setAnimate = this.setAnimate.bind(this);
     this.context = this;
 
     this.calcGradientDeg(this.#value);
+  }
+
+  #isValidValue(value) {
+    return +value >= 0 && +value <= 100;
+  }
+
+  calcGradientDeg(value) {
+    if (!this.#isValidValue) return;
+    this.element.style.background = `conic-gradient(var(--main-blue) ${
+      value * 3.6
+    }deg, var(--main-grey) 0deg)`;
+  }
+
+  #render() {
+    const circularProgressBar = CustomFramework.createElement('div', {}, []);
+    circularProgressBar.classList.add('circular-progress-bar');
+    return circularProgressBar;
   }
 
   // ===Api===
@@ -37,24 +54,5 @@ export class CircularProgressBar {
     if (isAnimated)
       this.element.classList.add('circular-progress-bar_animated');
     else this.element.classList.remove('circular-progress-bar_animated');
-  }
-
-  // ===Private methods===
-
-  #isValidValue(value) {
-    return +value >= 0 && +value <= 100;
-  }
-
-  calcGradientDeg(value) {
-    if (!this.#isValidValue) return;
-    this.element.style.background = `conic-gradient(var(--main-blue) ${
-      value * 3.6
-    }deg, var(--main-grey) 0deg)`;
-  }
-
-  #render() {
-    const circularProgressBar = CustomFramework.createElement('div', {}, []);
-    circularProgressBar.classList.add('circular-progress-bar');
-    return circularProgressBar;
   }
 }
