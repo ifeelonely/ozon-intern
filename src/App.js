@@ -11,6 +11,7 @@ export class App {
 
     const { element: progressBlock } = new ProgressBlock();
     app.appendChild(progressBlock);
+
     return app;
   }
 }
