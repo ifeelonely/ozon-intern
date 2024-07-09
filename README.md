@@ -1,7 +1,7 @@
 # Тестовое задание Ozon
-
-[Деплой проекта](https://ifeelonely.github.io/ozon-intern/)
-
+## Ссылки
+- [Деплой проекта](https://ifeelonely.github.io/ozon-intern/)
+- [API прогресс бара](https://github.com/ifeelonely/ozon-intern/blob/master/src/components/CircularProgressBar/CircularProgressBar.js#L39)
 ## Стек
 
 - HTML
